@@ -25,7 +25,8 @@
 
 CC=gcc
 CXX=g++
-CFLAGS=-Wall -g -O2 -std=c99
+#CFLAGS=-Wall -g -O2 -std=c99
+CFLAGS=-Wall -O2 -std=c99
 LFLAGS=
 
 PRG=test
