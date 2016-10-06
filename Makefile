@@ -29,8 +29,8 @@ CXX=g++
 CFLAGS=-Wall -O2 -std=c99
 LFLAGS=
 
-PRG=test
-CSRC=$(PRG).c
+PRG=main
+CSRC=$(PRG).c test.c
 COBJ=$(CSRC:.c=.o)
 
 $(PRG).bin: $(COBJ)

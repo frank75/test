@@ -1,8 +1,16 @@
 #include <stdio.h>
 #include "test.h"
 
-int main(void)
+void print_bits(unsigned char x)
 {
-	printf("TEST\n");
-	return 0;
+	int i;
+
+	printf("0b");
+
+	for (i = 8 * sizeof(x) - 1; i >= 0; i--) {
+		(x & (1 << i)) ? putchar('1') : putchar('0');
+	}
+
+	printf("\n");
 }
+
