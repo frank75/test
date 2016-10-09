@@ -1,6 +1,5 @@
 *.o
 main
 *~
-.deps
 autom4te.cache/
 config.status
