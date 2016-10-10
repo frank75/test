@@ -15,11 +15,23 @@ void print_bits(unsigned char x)
 	printf("\n");
 }
 
+void version(void) 
+{
+	printf("Wersja:\t");
+	printf("\tv0.1\n");
+	printf("Autor:\t");
+	printf("\tPrzemysław Kuśmierek ");
+	printf("(frank75@interia.pl)\n");
+	printf("Data wydania: ");
+	printf("\t10 Październik 2016r.\n");
+}
+
 void uses(char *progname)
 {
 		printf("Składnia: %s [OPCJA]...\n",progname);
 		printf("Wypisanie liczby dziesiętnej w postaci binarnej\n\n");
 		printf("  -d N\t\t\tN - liczba z przedziału 0..255\n");
 		printf("  -h\t\t\twyświetlenie tego opisu i zakończenie\n");
+		printf("  -v\t\t\twyświetlenie autora i wersji\n");
 }
 
