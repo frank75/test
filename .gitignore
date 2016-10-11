@@ -1,5 +1,5 @@
 *.o
 main
 *~
-autom4te.cache/
+autom4te.cache
 config.log
