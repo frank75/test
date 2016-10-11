@@ -1,8 +1,10 @@
+#define _GNU_SOURCE
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 //#include <unistd.h>
 #include <getopt.h>
+#include <string.h>
 
 #include "test.h"
 
@@ -18,6 +20,8 @@ int main(int argc, char **argv)
 	char *dvalue = NULL;
 	int index;
 	int c;
+    char *basec, *bname;
+
 
 	opterr = 0;
 
@@ -61,8 +65,9 @@ int main(int argc, char **argv)
 		printf("Non-option argument %s\n", argv[index]);
 
 	if( hflag == 1 ) {
-		//printf("%s\n",argv[0]);
-		uses(argv[0]);
+        basec = strdup(argv[0]);
+        bname = basename(basec);
+		uses(bname);
 		return 0;
 	}
 
