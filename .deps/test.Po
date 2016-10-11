@@ -7,7 +7,7 @@ test.o: test.c /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
- /usr/include/bits/stdio.h test.h
+ /usr/include/bits/stdio.h /usr/include/libgen.h test.h
 
 /usr/include/stdc-predef.h:
 
@@ -42,5 +42,7 @@ test.o: test.c /usr/include/stdc-predef.h /usr/include/stdio.h \
 /usr/include/bits/sys_errlist.h:
 
 /usr/include/bits/stdio.h:
+
+/usr/include/libgen.h:
 
 test.h:

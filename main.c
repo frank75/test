@@ -12,6 +12,8 @@ int main(int argc, char **argv)
 	unsigned char x = 0;
 
 	int aflag = 0;
+	int hflag = 0;
+	int vflag = 0;
 	char *bvalue = NULL;
 	char *dvalue = NULL;
 	int index;
@@ -19,7 +21,7 @@ int main(int argc, char **argv)
 
 	opterr = 0;
 
-	while ((c = getopt(argc, argv, "ab:d:")) != -1)
+	while ((c = getopt(argc, argv, "ab:d:hv")) != -1)
 		switch (c) {
 		case 'a':
 			aflag = 1;
@@ -29,6 +31,12 @@ int main(int argc, char **argv)
 			break;
 		case 'd':
 			dvalue = optarg;
+			break;
+		case 'h':
+			hflag = 1;
+			break;
+		case 'v':
+			vflag = 1;
 			break;
 		case '?':
 			if (optopt == 'b' || optopt == 'd')
@@ -52,10 +60,21 @@ int main(int argc, char **argv)
 	for (index = optind; index < argc; index++)
 		printf("Non-option argument %s\n", argv[index]);
 
+	if( hflag == 1 ) {
+		//printf("%s\n",argv[0]);
+		uses(argv[0]);
+		return 0;
+	}
+
+	if( vflag == 1 ) {
+		version();
+		return 0;
+	}
+
 	if (dvalue != NULL)
 		x = atoi(dvalue);
 
-	printf("%d(dec)=", x);
+	//printf("%d(dec)=", x);
 	print_bits(x);
 	return 0;
 }
